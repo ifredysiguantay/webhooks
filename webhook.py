@@ -1,5 +1,6 @@
 import web
-import os
+import base64
+bytes
 urls = (
         '/result', 'url_out',
         '/servicelogs', 'urlback'
@@ -15,8 +16,8 @@ class url_out:
         f = open('test.pdf','wb')
         print('\n\n\n\n val of data',data)
         print('\n\n\n\n\n',type(data))
-        for line in open(data , 'rb').readlines():
-            f.write(line)
+        #for line in open(data , 'rb').readlines():
+        f.write(base64.b16decode(data))
         f.close()
         return ''
 
