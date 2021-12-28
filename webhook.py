@@ -15,7 +15,7 @@ class url_out:
         data = web.data()
         os.chdir('/home/inapenc/signbox-files')
         with open("test.pdf",'wb') as f:
-            f.write(base64.b16decode(data))
+            f.write(data)
         #f.close()
         return ''
 
