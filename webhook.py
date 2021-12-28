@@ -1,3 +1,4 @@
+import os
 import web
 import base64
 bytes
