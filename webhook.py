@@ -14,12 +14,9 @@ class url_out:
     def POST(self):
         data = web.data()
         os.chdir('/home/inapenc/signbox-files')
-        f = open('test.pdf','wb')
-        print('\n\n\n\n val of data',data)
-        print('\n\n\n\n\n',type(data))
-        #for line in open(data , 'rb').readlines():
-        f.write(base64.b16decode(data))
-        f.close()
+        with open("test.pdf",'wb') as f:
+            f.write(base64.b16decode(data))
+        #f.close()
         return ''
 
 class urlback:
