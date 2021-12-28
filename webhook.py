@@ -12,10 +12,10 @@ class url_out:
     def POST(self):
         data = web.data()
         os.chdir('/home/inapenc/signbox-files')
-        f = open('test.pdf','w')
+        f = open('test.pdf','wb')
         print('\n\n\n\n val of data',data)
         print('\n\n\n\n\n',type(data))
-        for line in open(data , 'wb').readlines():
+        for line in open(data , 'rb').readlines():
             f.write(line)
         f.close()
         return ''
